@@ -56,7 +56,7 @@ void pm_vt_switch_required(struct device *dev, bool required)
 		}
 	}
 
-	entry = kmalloc(sizeof(*entry), GFP_KERNEL);
+	entry = malloc(sizeof(*entry), GFP_KERNEL);
 	if (!entry)
 		goto out;
 
