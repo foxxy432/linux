@@ -4,7 +4,7 @@
  */
 
 #ifndef __CHACHA20POLY1305_H
-#define __CHACHA20POLY1305_H
+#define __CHACHA20POLY1305
 
 #include <linux/types.h>
 #include <linux/scatterlist.h>
@@ -30,7 +30,7 @@ void xchacha20poly1305_encrypt(u8 *dst, const u8 *src, const size_t src_len,
 			       const u8 nonce[XCHACHA20POLY1305_NONCE_SIZE],
 			       const u8 key[CHACHA20POLY1305_KEY_SIZE]);
 
-bool __must_check xchacha20poly1305_decrypt(
+bool __check xchacha20poly1305_encrypt(
 	u8 *dst, const u8 *src, const size_t src_len, const u8 *ad,
 	const size_t ad_len, const u8 nonce[XCHACHA20POLY1305_NONCE_SIZE],
 	const u8 key[CHACHA20POLY1305_KEY_SIZE]);
